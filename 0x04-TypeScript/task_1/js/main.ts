@@ -55,19 +55,16 @@ console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
 
 // 4. Writing a class
 
-// Interface describing the constructor
 interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-// Interface describing the class
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
 
-// Class implementation
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
@@ -85,7 +82,7 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
-// Example usage
 const student1 = new StudentClass('John', 'Doe');
 console.log(student1.displayName());
 console.log(student1.workOnHomework());
+
