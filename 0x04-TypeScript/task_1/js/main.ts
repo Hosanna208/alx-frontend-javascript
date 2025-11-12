@@ -26,7 +26,7 @@ console.log(teacher3);
 // location: "London"
 
 // Extending the Teacher interface
-interface Directors extends Teacher {
+interface Director extends Teacher {
   numberOfReports: number;
 }
 
