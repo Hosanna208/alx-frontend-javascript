@@ -46,29 +46,24 @@ function createEmployee(salary: number | string): Director | Teacher {
   } else {
     return new Director();
   }
-}
 
-// ===== New functions for Task 6 =====
+// ===== Task 6 functions =====
 
-// Type predicate to check if an employee is a Director
-function isDirector(employee: Director | Teacher): employee is Director {
+// Type predicate to check if employee is a Director
+export function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
 
-// Execute the work based on employee type
-function executeWork(employee: Director | Teacher): void {
+// Execute work based on employee type and return string
+export function executeWork(employee: Director | Teacher): string {
   if (isDirector(employee)) {
-    console.log(employee.workDirectorTasks());
+    return employee.workDirectorTasks();
   } else {
-    console.log(employee.workTeacherTasks());
+    return employee.workTeacherTasks();
   }
 }
 
 // ===== Test cases =====
-executeWork(createEmployee(200));   // Getting to work
-executeWork(createEmployee(1000));  // Getting to director tasks
-// Example usage
-console.log(createEmployee(200));
-console.log(createEmployee(1000));
-console.log(createEmployee('$500'));
+// console.log(executeWork(createEmployee(200)));   // Getting to work
+// console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
 
