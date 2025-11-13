@@ -69,7 +69,7 @@ export function executeWork(employee: Director | Teacher): string {
 export type Subjects = 'Math' | 'History';
 
 // Define the function
-export function teachClass(todayClass: Subjects): string {
+export function teachClass(todayClass:Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
   } else {
